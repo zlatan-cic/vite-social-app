@@ -1,0 +1,167 @@
+.container-login {
+  height: 100vh;
+  background-color: #cbb5ff;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.login {
+  max-width: 750px;
+  .card {
+    // width: 50%;
+    display: flex;
+    // flex-direction: row-reverse;
+    background-color: #fff;
+    border-radius: 15px;
+    min-height: 600px;
+    overflow: hidden;
+
+    
+    .left{
+      flex: 1;
+      background: linear-gradient(rgba(60, 25, 116, 0.404), rgb(0, 12, 22)), url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600") no-repeat center ;
+      background-size: cover;
+      
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: #FFF;
+      justify-content: center;
+       
+      h1{
+        font-size: 75px;
+        line-height: 1.5;
+      }
+      p{
+        font-size: 1.2rem;
+      }
+      span{
+        font-size: 14px;
+      }
+      button{
+        width: 50%;
+        padding: 10px;
+        border: none;
+        color: rebeccapurple;
+        background-color: #FFF;
+        cursor: pointer;
+      }
+    }
+
+    .right{
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+      h1{
+        color: #555;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        input{
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          font-size: 1rem;
+        }
+        button{
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: #938eef;
+          color: #FFF;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
+// .login {
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: #cbb5ff;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   .card {
+//     width: 50%;
+//     display: flex;
+//     background-color: #fff;
+//     border-radius: 15px;
+//     min-height: 600px;
+//     overflow: hidden;
+
+    
+//     .left{
+//       flex: 1;
+//       background: linear-gradient(rgba(60, 25, 116, 0.404), rgb(0, 12, 22)), url("https://plus.unsplash.com/premium_photo-1661715817028-818d78a4e8e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80") no-repeat center ;
+//       background-size: cover;
+      
+//       padding: 50px;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 30px;
+//       color: #FFF;
+//       justify-content: center;
+      
+//       h1{
+//         font-size: 75px;
+//         line-height: 1.5;
+//       }
+//       p{}
+//       span{
+//         font-size: 14px;
+//       }
+//       button{
+//         width: 50%;
+//         padding: 10px;
+//         border: none;
+//         color: rebeccapurple;
+//         background-color: #FFF;
+//         cursor: pointer;
+//       }
+//     }
+
+//     .right{
+//       flex: 1;
+//       padding: 50px;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 50px;
+//       justify-content: center;
+//       h1{
+//         color: #555;
+//       }
+//       form{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 30px;
+//         input{
+//           border: none;
+//           border-bottom: 1px solid lightgray;
+//           padding: 20px 10px;
+//         }
+//         button{
+//           width: 50%;
+//           padding: 10px;
+//           border: none;
+//           background-color: #938eef;
+//           color: #FFF;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
+// }
