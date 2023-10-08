@@ -1,6 +1,9 @@
 .navbar-container {
   // background-color: aqua;
   border-bottom: 1px solid lightgray;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
 }
 
 .navbar {
@@ -10,56 +13,73 @@
   margin: auto;
   max-width: 1400px;
   justify-content: space-between;
-  
 
-  // background-color: lightcoral;
-  .left{
+  .left {
     display: flex;
     align-items: center;
     // background-color: tomato;
     gap: 15px;
 
-    span{
+    span {
       font-weight: bold;
       font-size: 20px;
       color: rgb(109, 21, 224);
     }
 
-    .search{
+    // .search{
+    //   display: flex;
+    //   align-items: center;
+    //   gap: 10px;
+    //   border: 1px solid lightgray;
+    //   border-radius: 5px;
+    //   padding: 5px;
+    //   input{
+    //     border: none;
+    //     min-width: 450px;
+    //   }
+    // }
+  }
+
+  .center {
+    // background-color: rosybrown;
+
+    .search {
       display: flex;
       align-items: center;
       gap: 10px;
       border: 1px solid lightgray;
       border-radius: 5px;
       padding: 5px;
-      input{
+      input {
         border: none;
         min-width: 450px;
+        font-size: 16px;
+      }
+
+      input:focus{
+        outline: none;
       }
     }
   }
 
-  .right{
-
+  .right {
     // background-color: cadetblue;
     display: flex;
     align-items: center;
     gap: 10px;
-    .user{
-
+    .user {
       display: flex;
       align-items: center;
       gap: 10px;
       font-weight: 500;
-      img{
+      img {
         width: 30px;
         height: 30px;
         object-fit: cover;
         border-radius: 50%;
       }
 
-      span{
-
+      span {
       }
     }
   }

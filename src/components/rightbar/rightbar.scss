@@ -1,0 +1,13 @@
+.rightBar {
+  background-color: cornflowerblue;
+  // 
+  flex: 2.5;
+  position: sticky;
+  top: 56.5px;
+  height: calc(100vh - 56px);
+  overflow: auto;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
