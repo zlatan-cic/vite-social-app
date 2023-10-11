@@ -1,3 +1,4 @@
+@import '../../styles.scss';
 
 // .leftbar::-webkit-scrollbar {
 //   width: 0.5rem; /* Adjust the width as needed */
@@ -11,77 +12,84 @@
 //   background: transparent; /* Make the thumb transparent */
 // }
 
+
 .leftbar {
-  background-color: tomato;
-  // 
-  flex: 2;
-  position: sticky;
-  top: 56px;
-  height: calc(100vh - 57px);
-  overflow: auto;
+  @include themify($themes) {
+    // 
+    flex: 2;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow: auto;
 
-  // For Mozila
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  // For Crome
-  &::-webkit-scrollbar{
-    display: none;
+    background-color: themed('bg');
+    color: themed("textColor");
     
-  }
   
-  // z-index: -1;
-
-  .container {
-    padding: 20px;
-    
-
-    hr {
-      margin: 20px 0px;
-      border: none;
-      height: 0.5px;
-      background-color: lightgray;
+    // For Mozila
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    // For Crome
+    &::-webkit-scrollbar{
+      display: none;
+      
     }
-
-    .menu{
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      span {
-        font-size: 12px;
+    
+    // z-index: -1;
+  
+    .container {
+      padding: 20px;
+      
+  
+      hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: themed('border');
       }
-
-      .user{
-
+  
+      .menu{
         display: flex;
-        align-items: center;
-        gap: 10px;
-        img{
-          width: 30px;
-          height: 30px;
-          object-fit: cover;
-          border-radius: 50%;
+        flex-direction: column;
+        gap: 20px;
+  
+        span {
+          font-size: 12px;
         }
-
-        span{
-          font-size: 14px;
+  
+        .user{
+  
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+  
+          span{
+            font-size: 14px;
+          }
         }
-      }
-
-      .item{
-
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        img{
-          width: 30px;
-          // height: 30px;
-        }
-
-        span{
-          font-size: 14px;
+  
+        .item{
+  
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img{
+            width: 30px;
+            // height: 30px;
+          }
+  
+          span{
+            font-size: 14px;
+          }
         }
       }
     }
   }
+ 
 }

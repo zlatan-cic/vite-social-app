@@ -1,13 +1,112 @@
-.rightBar {
-  background-color: cornflowerblue;
-  // 
-  flex: 2.5;
-  position: sticky;
-  top: 56.5px;
-  height: calc(100vh - 56px);
-  overflow: auto;
+@import "../../styles.scss";
 
-  &::-webkit-scrollbar{
-    display: none;
+.rightBar {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+    flex: 2.6;
+    position: sticky;
+    top: 56.5px;
+    height: calc(100vh - 56px);
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      // background-color: aliceblue;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 5px;
+
+      .item {
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.075);
+        -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.075);
+        padding: 20px;
+        background-color: themed("bg");
+        border-radius: 5px;
+
+        span {
+          color: themed("textColor");
+          font-size: 14px;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 20px 0;
+
+          // background-color: cadetblue;
+
+          .userInfo {
+            display: flex;
+            align-items: center;
+            // background-color: tomato;
+            gap: 10px;
+            position: relative;
+
+            img {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            .online {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: limegreen;
+              position: absolute;
+              top: 0;
+              left: 22px;
+            }
+
+            p {
+              font-size: 14px;
+              color: themed('textColor');
+            }
+
+            span {
+              font-weight: 500;
+              color: themed("textColor");
+            }
+          }
+
+          .buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            button {
+              border: none;
+              padding: 5px;
+              color: #fff;
+              cursor: pointer;
+              border-radius: 50%;
+              // margin: 0 5px;
+
+              svg {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                font-size: 18px;
+              }
+
+              &:first-child {
+                background-color: rgb(18, 175, 25);
+              }
+
+              &:last-child {
+                background-color: rgb(255, 23, 23);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

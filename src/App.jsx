@@ -14,15 +14,21 @@ import Leftbar from "./components/leftbar/Leftbar";
 import Rightbar from "./components/rightbar/RightBar";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
+import "./styles.scss"
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
+import { AuthContext } from "./context/authContext";
 
 function App() {
 
-  const curentUser = true;
+  const {curentUser} = useContext(AuthContext);
+
+  const {darkMode} = useContext(DarkModeContext)
 
 
   const Layuot = () => {
     return (
-      <div>
+      <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <Navbar />
         <div style={{ display: "flex" }}>
           <Leftbar />
