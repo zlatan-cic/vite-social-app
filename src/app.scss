@@ -1,0 +1,11 @@
+@import "./styles.scss";
+
+.test02-container {
+  max-width: 1200px;
+}
+
+.theme-dark {
+  @include themify($themes) {
+    background-color: aqua;
+  }
+}

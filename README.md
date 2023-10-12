@@ -1,3 +1,12 @@
+# Social media website (ViteSocial)
+
+⚠️ This project is currently under construction and is not yet complete. It may lack certain features or functionality.
+### Demo Screenshot
+![ViteSocial](./src/./assets/vitesocial.png)
+
+![ViteSocial](./src/./assets/vitesocial-login.png)
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

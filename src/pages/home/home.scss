@@ -6,9 +6,9 @@
   @include themify($themes) {
     background-color: themed("bgSoft");
     color: themed('textColor');
-    padding: 20px 40px;
+    padding: 20px 25px;
     .container{
-      background-color: aliceblue;
+      // background-color: aliceblue;
     }
 
   }

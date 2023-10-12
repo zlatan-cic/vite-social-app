@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 // .leftbar::-webkit-scrollbar {
 //   width: 0.5rem; /* Adjust the width as needed */
@@ -12,84 +12,83 @@
 //   background: transparent; /* Make the thumb transparent */
 // }
 
-
 .leftbar {
   @include themify($themes) {
-    // 
+    //
     flex: 2;
     position: sticky;
     top: 57px;
     height: calc(100vh - 57px);
     overflow: auto;
+    padding: 5px;
 
-    background-color: themed('bg');
+    background-color: themed("bgSoft");
     color: themed("textColor");
-    
-  
+
     // For Mozila
     scrollbar-width: none;
     -ms-overflow-style: none;
     // For Crome
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       display: none;
-      
     }
-    
+
     // z-index: -1;
-  
+
     .container {
       padding: 20px;
-      
-  
+      background-color: themed("bg");
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.075);
+      -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.075);
+
       hr {
         margin: 20px 0px;
         border: none;
         height: 0.5px;
-        background-color: themed('border');
+        background-color: themed("border");
       }
-  
-      .menu{
+
+      .menu {
         display: flex;
         flex-direction: column;
         gap: 20px;
-  
+
         span {
           font-size: 12px;
         }
-  
-        .user{
-  
+
+        .user {
           display: flex;
           align-items: center;
           gap: 10px;
-          img{
+          img {
             width: 30px;
             height: 30px;
             object-fit: cover;
             border-radius: 50%;
           }
-  
-          span{
+
+          span {
             font-size: 14px;
           }
         }
-  
-        .item{
-  
+
+        .item {
           display: flex;
           align-items: center;
           gap: 10px;
-          img{
+          img {
             width: 30px;
             // height: 30px;
           }
-  
-          span{
+
+          span {
             font-size: 14px;
           }
         }
       }
     }
   }
- 
 }

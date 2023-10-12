@@ -15,6 +15,8 @@ import Rightbar from "./components/rightbar/RightBar";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import "./styles.scss"
+// Test
+import './app.scss'
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/authContext";
@@ -28,9 +30,9 @@ function App() {
 
   const Layuot = () => {
     return (
-      <div className={`theme-${darkMode ? "dark" : "light"}`}>
+      <div className={`theme-${darkMode ? "dark" : "light"} test01-container`}>
         <Navbar />
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" }} className="test02-container">
           <Leftbar />
           <div style={{flex:6}}>
           <Outlet />
