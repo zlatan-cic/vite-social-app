@@ -1,15 +1,18 @@
+@import "../../styles.scss";
+
 .container-login {
   height: 100vh;
   background-color: #cbb5ff;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
 .login {
   max-width: 750px;
+
+  
   .card {
     // width: 50%;
     display: flex;
@@ -19,73 +22,83 @@
     min-height: 600px;
     overflow: hidden;
 
-    
-    .left{
+    @include mobile {
+      max-width: 320px;
+      flex-direction: column;
+    }
+
+    .left {
       flex: 1;
-      background: linear-gradient(rgba(60, 25, 116, 0.404), rgb(0, 12, 22)), url("https://images.unsplash.com/photo-1621112904887-419379ce6824?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80") no-repeat center ;
+      background: linear-gradient(rgba(60, 25, 116, 0.404), rgb(0, 12, 22)),
+        url("https://images.unsplash.com/photo-1621112904887-419379ce6824?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80")
+          no-repeat center;
       background-size: cover;
-      
+
       padding: 50px;
       display: flex;
       flex-direction: column;
       gap: 30px;
-      color: #FFF;
+      color: #fff;
       justify-content: center;
-       
-      h1{
+
+      h1 {
         font-size: 75px;
         line-height: 1.5;
+        @include mobile {
+          font-size: 45px;
+        }
       }
-      p{
+      p {
         font-size: 1.2rem;
+        @include mobile {
+          display: none;
+        }
       }
-      span{
+      span {
         font-size: 14px;
       }
-      button{
+      button {
         width: 50%;
         padding: 10px;
         border: none;
         color: rebeccapurple;
-        background-color: #FFF;
+        background-color: #fff;
         cursor: pointer;
       }
     }
 
-    .right{
+    .right {
       flex: 1;
       padding: 50px;
       display: flex;
       flex-direction: column;
       gap: 50px;
       justify-content: center;
-      h1{
+      h1 {
         color: #555;
       }
-      form{
+      form {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        input{
+        input {
           border: none;
           border-bottom: 1px solid lightgray;
           padding: 20px 10px;
           font-size: 1rem;
         }
-        button{
+        button {
           width: 50%;
           padding: 10px;
           border: none;
           background-color: #938eef;
-          color: #FFF;
+          color: #fff;
           cursor: pointer;
         }
       }
     }
   }
 }
-
-
 
 // .login {
 //   width: 100vw;
@@ -103,19 +116,18 @@
 //     min-height: 600px;
 //     overflow: hidden;
 
-    
 //     .left{
 //       flex: 1;
 //       background: linear-gradient(rgba(60, 25, 116, 0.404), rgb(0, 12, 22)), url("https://plus.unsplash.com/premium_photo-1661715817028-818d78a4e8e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80") no-repeat center ;
 //       background-size: cover;
-      
+
 //       padding: 50px;
 //       display: flex;
 //       flex-direction: column;
 //       gap: 30px;
 //       color: #FFF;
 //       justify-content: center;
-      
+
 //       h1{
 //         font-size: 75px;
 //         line-height: 1.5;
