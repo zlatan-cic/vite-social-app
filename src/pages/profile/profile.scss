@@ -48,11 +48,25 @@
           right: 0;
           bottom: 10px;
           border: 2px solid themed("border");
+
+          @include mobile{
+            bottom: 100px;
+            left: 85px;
+          }
+        }
+
+        @include mobile{
+          flex-direction: column;
+          height: 20vh;
+          padding: 20px;
+          gap: 5px;
         }
 
         .left {
           // background-color: tomato;
           flex: 1;
+
+          
         }
         .center {
           // background-color: rgb(219, 149, 136);

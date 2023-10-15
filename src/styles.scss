@@ -1,15 +1,15 @@
-$themes:(
-  light:(
+$themes: (
+  light: (
     textColor: #000,
-    bg: #FFF,
+    bg: #fff,
     logo: rgb(112, 23, 228),
     bgSoft: #f6f6f6,
     textColorSoft: #555,
     border: lightgray,
   ),
-  dark:(
+  dark: (
     textColor: whitesmoke,
-    bg:#222,
+    bg: #222,
     logo: rgb(199, 175, 255),
     bgSoft: #333,
     textColorSoft: lightgray,
@@ -40,4 +40,14 @@ $themes:(
   @return map-get($theme-map, $key);
 }
 
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
 
+@mixin tablet {
+  @media screen and (max-width: 960px) {
+    @content;
+  }
+}

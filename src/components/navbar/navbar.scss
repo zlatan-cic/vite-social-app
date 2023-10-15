@@ -21,6 +21,12 @@
       
       justify-content: space-between;
 
+      @include mobile {
+        justify-content: space-evenly;
+        gap: 20px;
+        
+      }
+
       .left {
         display: flex;
         align-items: center;
@@ -41,6 +47,9 @@
           border: 1px solid themed('border');
           border-radius: 5px;
           padding: 5px;
+
+          
+
           input {
             border: none;
             min-width: 450px;
@@ -48,6 +57,14 @@
             font-size: 16px;
             background: transparent;
             color: themed('textColor');
+
+            @include mobile {
+              display: none;
+            }
+
+            @include tablet{
+              min-width: 200px
+            }
           }
 
           input:focus {
@@ -60,6 +77,10 @@
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @include mobile {
+          display: none;
+        }
         .user {
           display: flex;
           align-items: center;

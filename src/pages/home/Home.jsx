@@ -7,8 +7,6 @@ const Home = () => {
     <div className='home'>
         <Stories/>
         <Posts/>
-      {/* <div className="container">
-      </div> */}
     </div>
   );
 };
